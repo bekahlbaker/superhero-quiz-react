@@ -1,24 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import TitleLogo from './img/title.png';
+import styled from 'styled-components';
+import LargeButton from './components/LargeButton';
+import Header from './components/Header';
+import Modal from './components/Modal';
 
 function App() {
+
+  const [isEditing, setIsEditing] = useState(false);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {isEditing && (<Modal onClick={() => setIsEditing(false)} />)}
+      <Header onClick={() => setIsEditing(true)} />
     </div>
   );
 }
