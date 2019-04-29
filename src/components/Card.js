@@ -14,7 +14,7 @@ const Main = styled.div`
   flex-direction: column;
   min-height: 300px;
   justify-content: center;
-  width: 300px;
+  min-width: 300px;
   padding-bottom: 24px;
   position: relative;
 `;

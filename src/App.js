@@ -21,12 +21,16 @@ function App() {
     setScore(score + 1);
   }
 
+  function startOver() {
+    console.log('Start over');
+  }
+
   return (
     <MainApp>
       {isShowingModal && <Modal onClick={() => setisShowingModal(false)} />}
       <Header onClick={() => setisShowingModal(true)} />
       <Grid heroes={[{ name: 'antman' }]} addToScore={addToScore} />
-      <Footer score={score} />
+      <Footer score={score} startOver={startOver} />
     </MainApp>
   );
 }

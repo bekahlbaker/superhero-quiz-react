@@ -25,8 +25,49 @@ const Score = styled.p`
   }
 `;
 
+const BottomFooter = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 36px;
+  width: 100%;
+`;
+
+const BuiltBy = styled.div`
+  a {
+    text-decoration: underline;
+    text-align: center;
+    color: black;
+    font-size: 1.25em;
+    cursor: pointer;
+    letter-spacing: 2px;
+  }
+
+  p {
+    padding-top: 15px;
+    text-align: center;
+    color: black;
+    font-size: 1em;
+    letter-spacing: 2px;
+  }
+`;
+
+const Reset = styled.button`
+  letter-spacing: 2px;
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 25px;
+  border: 1px solid black;
+  background: #000;
+  color: #fff;
+
+  &:hover {
+    background: transparent;
+  }
+`;
+
 export default function Footer(props) {
-  const { score } = props;
+  const { score, startOver } = props;
   const [clickedShowScore, setClickedShowScore] = useState(false);
   const [level, setLevel] = useState('ignorant');
 
@@ -63,6 +104,12 @@ export default function Footer(props) {
         </Score>
       )}
       <LargeButton title={'GET SCORE'} onClick={clickShowScore} />
+      <BottomFooter>
+        <BuiltBy>
+          <p>created for Sam & Jack</p>
+        </BuiltBy>
+        <Reset onClick={startOver}>Start Over</Reset>
+      </BottomFooter>
     </Main>
   );
 }

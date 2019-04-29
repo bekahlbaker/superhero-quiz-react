@@ -10,7 +10,7 @@ const ButtonView = styled.button`
   letter-spacing: 3px;
   outline: none;
   padding: 24px 40px;
-  width: 40%;
+  min-width: 40%;
 
   &:hover {
     background: transparent;
