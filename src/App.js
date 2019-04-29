@@ -4,8 +4,7 @@ import Modal from './components/Modal';
 import Header from './components/Header';
 import Grid from './components/Grid';
 import Footer from './components/Footer';
-
-// TODO IMPORT HEROES JSON
+import heroes from './heroes.json';
 
 const MainApp = styled.div`
   align-items: center;
@@ -13,6 +12,8 @@ const MainApp = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: ${props => props.height};
+  overflow: hidden;
 `;
 
 function App() {
@@ -30,14 +31,10 @@ function App() {
   }
 
   return (
-    <MainApp>
+    <MainApp height={isShowingModal ? '100vh' : 'auto'}>
       {isShowingModal && <Modal onClick={() => setisShowingModal(false)} />}
       <Header onClick={() => setisShowingModal(true)} />
-      <Grid
-        heroes={[{ name: 'antman' }]}
-        addToScore={addToScore}
-        shouldReset={shouldReset}
-      />
+      <Grid heroes={heroes} addToScore={addToScore} shouldReset={shouldReset} />
       <Footer score={score} startOver={startOver} />
     </MainApp>
   );

@@ -1,0 +1,238 @@
+{
+  "heroes": [
+    {
+      "id": 0,
+      "name": "flash",
+      "image": "a1",
+      "background": "blue"
+    },
+    {
+      "id": 1,
+      "name": "ant man",
+      "image": "b2",
+      "background": "pink"
+    },
+    {
+      "id": 2,
+      "name": "deadpool",
+      "image": "c3",
+      "background": "yellow"
+    },
+    {
+      "id": 3,
+      "name": "spiderman",
+      "image": "d4",
+      "background": "orange"
+    },
+    {
+      "id": 4,
+      "name": "clayface",
+      "image": "e5",
+      "background": "green"
+    },
+    {
+      "id": 5,
+      "name": "penguin",
+      "image": "f6",
+      "background": "purple"
+    },
+    {
+      "id": 6,
+      "name": "electro",
+      "image": "g7",
+      "background": "blue"
+    },
+    {
+      "id": 7,
+      "name": "two face",
+      "image": "h8",
+      "background": "pink"
+    },
+    {
+      "id": 8,
+      "name": "wolverine",
+      "image": "i9",
+      "background": "yellow"
+    },
+    {
+      "id": 9,
+      "name": "hawkeye",
+      "image": "j10",
+      "background": "orange"
+    },
+    {
+      "id": 10,
+      "name": "scarecrow",
+      "image": "k11",
+      "background": "green"
+    },
+    {
+      "id": 11,
+      "name": "poison ivy",
+      "image": "l12",
+      "background": "purple"
+    },
+    {
+      "id": 12,
+      "name": "venom",
+      "image": "m13",
+      "background": "blue"
+    },
+    {
+      "id": 13,
+      "name": "cyborg",
+      "image": "n14",
+      "background": "pink"
+    },
+    {
+      "id": 14,
+      "name": "batman",
+      "image": "o15",
+      "background": "yellow"
+    },
+    {
+      "id": 15,
+      "name": "wonder woman",
+      "image": "p16",
+      "background": "orange"
+    },
+    {
+      "id": 16,
+      "name": "superman",
+      "image": "q17",
+      "background": "green"
+    },
+    {
+      "id": 17,
+      "name": "hulk",
+      "image": "r18",
+      "background": "purple"
+    },
+    {
+      "id": 18,
+      "name": "joker",
+      "image": "s19",
+      "background": "blue"
+    },
+    {
+      "id": 19,
+      "name": "bizarro",
+      "image": "t20",
+      "background": "pink"
+    },
+    {
+      "id": 20,
+      "name": "aquaman",
+      "image": "u21",
+      "background": "yellow"
+    },
+    {
+      "id": 21,
+      "name": "cat woman",
+      "image": "v22",
+      "background": "orange"
+    },
+    {
+      "id": 22,
+      "name": "green goblin",
+      "image": "w23",
+      "background": "green"
+    },
+    {
+      "id": 23,
+      "name": "bat girl",
+      "image": "x24",
+      "background": "purple"
+    },
+    {
+      "id": 24,
+      "name": "mr freeze",
+      "image": "y25",
+      "background": "blue"
+    },
+    {
+      "id": 25,
+      "name": "lex luthor",
+      "image": "z26",
+      "background": "pink"
+    },
+    {
+      "id": 26,
+      "name": "thor",
+      "image": "za27",
+      "background": "yellow"
+    },
+    {
+      "id": 27,
+      "name": "robin",
+      "image": "zb28",
+      "background": "orange"
+    },
+    {
+      "id": 28,
+      "name": "ironman",
+      "image": "zc29",
+      "background": "green"
+    },
+    {
+      "id": 29,
+      "name": "killer croc",
+      "image": "zd30",
+      "background": "purple"
+    },
+    {
+      "id": 30,
+      "name": "groot",
+      "image": "ze31",
+      "background": "blue"
+    },
+    {
+      "id": 31,
+      "name": "harley quinn",
+      "image": "zf32",
+      "background": "pink"
+    },
+    {
+      "id": 32,
+      "name": "daredevil",
+      "image": "zg33",
+      "background": "yellow"
+    },
+    {
+      "id": 33,
+      "name": "captain america",
+      "image": "zh34",
+      "background": "orange"
+    },
+    {
+      "id": 34,
+      "name": "green arrow",
+      "image": "zi35",
+      "background": "green"
+    },
+    {
+      "id": 35,
+      "name": "hawk man",
+      "image": "zj36",
+      "background": "purple"
+    },
+    {
+      "id": 36,
+      "name": "dr doom",
+      "image": "zk37",
+      "background": "blue"
+    },
+    {
+      "id": 37,
+      "name": "bane",
+      "image": "zl38",
+      "background": "pink"
+    },
+    {
+      "id": 38,
+      "name": "riddler",
+      "image": "zm39",
+      "background": "yellow"
+    }
+  ]
+}

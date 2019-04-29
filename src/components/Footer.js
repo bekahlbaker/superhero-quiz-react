@@ -98,6 +98,7 @@ export default function Footer(props) {
   function clickStartOver() {
     setClickedShowScore(false);
     startOver();
+    window.scrollTo(0, 0);
   }
 
   return (

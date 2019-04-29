@@ -12,11 +12,15 @@ const Main = styled.div`
   border-radius: 5px;
   display: flex;
   flex-direction: column;
-  min-height: 300px;
+  min-height: 350px;
   justify-content: center;
-  min-width: 300px;
+  min-width: 350px;
   padding-bottom: 24px;
   position: relative;
+`;
+
+const Image = styled.img`
+  height: 300px;
 `;
 
 const Number = styled.h2`
@@ -50,10 +54,9 @@ export default function HeroCard(props) {
   const [isCorrect, setIsCorrect] = useState(null);
 
   const { hero, addToScore, shouldReset } = props;
-  const { name, backgroundColor } = hero;
+  const { name, image, background, id } = hero;
 
-  const color = 'pink';
-  const image = 'b2';
+  var refId = id;
 
   useEffect(() => {
     if (shouldReset) {
@@ -71,11 +74,17 @@ export default function HeroCard(props) {
     }
   }
 
+  function handleKeyDown(e) {
+    if (e.key === 'Enter') {
+      checkAnswer(answer, name);
+    }
+  }
+
   return (
     <Wrapper>
-      <Main background={require(`../img/bg-${color}.png`)}>
-        <Number>1</Number>
-        <img src={require(`../img/${image}.png`)} alt="" />
+      <Main background={require(`../img/bg-${background}.png`)}>
+        <Number>{id + 1}</Number>
+        <Image src={require(`../img/${image}.png`)} alt="" />
         <Input
           background={
             isCorrect !== null
@@ -86,6 +95,9 @@ export default function HeroCard(props) {
           }
           value={answer}
           onChange={value => setAnswer(value.target.value)}
+          type="text"
+          onKeyDown={handleKeyDown}
+          myRef={ref => (refId = ref)}
         />
         <Submit disabled={isCorrect} onClick={() => checkAnswer(answer, name)}>
           Submit

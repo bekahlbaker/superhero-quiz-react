@@ -15,13 +15,15 @@ const TextInput = styled.input`
 `;
 
 const TextField = props => {
-  const { placeholder, onChange, value, background } = props;
+  const { placeholder, onChange, value, background, onKeyDown, myRef } = props;
   return (
     <TextInput
       background={background}
       placeholder={placeholder}
       onChange={value => onChange(value)}
       value={value}
+      onKeyDown={onKeyDown}
+      ref={myRef}
     />
   );
 };
