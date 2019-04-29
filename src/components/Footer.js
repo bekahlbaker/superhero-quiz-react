@@ -95,6 +95,11 @@ export default function Footer(props) {
     setClickedShowScore(true);
   }
 
+  function clickStartOver() {
+    setClickedShowScore(false);
+    startOver();
+  }
+
   return (
     <Main>
       {clickedShowScore && (
@@ -108,7 +113,7 @@ export default function Footer(props) {
         <BuiltBy>
           <p>created for Sam & Jack</p>
         </BuiltBy>
-        <Reset onClick={startOver}>Start Over</Reset>
+        <Reset onClick={clickStartOver}>Start Over</Reset>
       </BottomFooter>
     </Main>
   );

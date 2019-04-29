@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Input from './Input';
 import styled from 'styled-components';
 
@@ -49,11 +49,18 @@ export default function HeroCard(props) {
   const [answer, setAnswer] = useState('');
   const [isCorrect, setIsCorrect] = useState(null);
 
-  const { hero, addToScore } = props;
+  const { hero, addToScore, shouldReset } = props;
   const { name, backgroundColor } = hero;
 
   const color = 'pink';
   const image = 'b2';
+
+  useEffect(() => {
+    if (shouldReset) {
+      setAnswer('');
+      setIsCorrect(null);
+    }
+  }, [shouldReset]);
 
   function checkAnswer(submitted, answer) {
     if (submitted === answer) {
@@ -80,7 +87,9 @@ export default function HeroCard(props) {
           value={answer}
           onChange={value => setAnswer(value.target.value)}
         />
-        <Submit onClick={() => checkAnswer(answer, name)}>Submit</Submit>
+        <Submit disabled={isCorrect} onClick={() => checkAnswer(answer, name)}>
+          Submit
+        </Submit>
       </Main>
     </Wrapper>
   );
