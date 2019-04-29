@@ -24,9 +24,9 @@ const Main = styled.div`
 `;
 
 const Grid = props => {
-  const { heroes } = props;
+  const { heroes, addToScore } = props;
   const gridItems = heroes.map(hero => (
-    <HeroCard hero={hero} key={hero.name} />
+    <HeroCard hero={hero} addToScore={addToScore} key={hero.name} />
   ));
   return <Main>{gridItems}</Main>;
 };

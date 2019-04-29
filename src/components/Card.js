@@ -15,8 +15,17 @@ const Main = styled.div`
   min-height: 300px;
   justify-content: center;
   width: 300px;
-  padding: 24px 0;
+  padding-bottom: 24px;
   position: relative;
+`;
+
+const Number = styled.h2`
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding-top: 24px;
+  text-align: left;
+  width: 85%;
 `;
 
 const Submit = styled.button`
@@ -40,7 +49,7 @@ export default function HeroCard(props) {
   const [answer, setAnswer] = useState('');
   const [isCorrect, setIsCorrect] = useState(null);
 
-  const { hero } = props;
+  const { hero, addToScore } = props;
   const { name, backgroundColor } = hero;
 
   const color = 'pink';
@@ -49,6 +58,7 @@ export default function HeroCard(props) {
   function checkAnswer(submitted, answer) {
     if (submitted === answer) {
       setIsCorrect(true);
+      addToScore();
     } else {
       setIsCorrect(false);
     }
@@ -57,6 +67,7 @@ export default function HeroCard(props) {
   return (
     <Wrapper>
       <Main background={require(`../img/bg-${color}.png`)}>
+        <Number>1</Number>
         <img src={require(`../img/${image}.png`)} alt="" />
         <Input
           background={

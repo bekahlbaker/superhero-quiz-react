@@ -9,7 +9,7 @@ const ButtonView = styled.button`
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 3px;
   outline: none;
-  padding: 15px 40px;
+  padding: 24px 40px;
   width: 40%;
 
   &:hover {
