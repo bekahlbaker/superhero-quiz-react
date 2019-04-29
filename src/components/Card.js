@@ -1,48 +1,76 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
+import Input from './Input';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: center;
-`;
+const Wrapper = styled.div``;
 
 const Main = styled.div`
-  background: ${props => `url(${props.background})`};
+  align-items: center;
+  background: url(${props => props.background});
   background-position: center;
   background-size: cover;
   border-radius: 5px;
-  height: 300px;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+  justify-content: center;
   width: 300px;
-  padding: 8px;
-  padding-top: 75px;
+  padding: 24px 0;
   position: relative;
 `;
 
-const Title = styled.p`
-  font-size: 1.25em;
-  font-weight: 600;
+const Submit = styled.button`
+  border: 1px solid black;
+  background: #000;
+  color: #fff;
+  font-size: 0.75em;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 2px;
+  padding: 5px 10px;
   text-align: center;
+  text-transform: lowercase;
+  width: 100px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 `;
 
-const Description = styled.p`
-  color: black;
-  margin: 2px;
-`;
+export default function HeroCard(props) {
+  const [answer, setAnswer] = useState('');
+  const [isCorrect, setIsCorrect] = useState(null);
 
-
-
-const HeroCard = props => {
   const { hero } = props;
   const { name, backgroundColor } = hero;
+
+  const color = 'pink';
+  const image = 'b2';
+
+  function checkAnswer(submitted, answer) {
+    if (submitted === answer) {
+      setIsCorrect(true);
+    } else {
+      setIsCorrect(false);
+    }
+  }
+
   return (
     <Wrapper>
-      <Main background='../img/bg-blue.png'>
-      <img src={require('../img/a1.png')} />
-        <Title>{name}</Title>
+      <Main background={require(`../img/bg-${color}.png`)}>
+        <img src={require(`../img/${image}.png`)} alt="" />
+        <Input
+          background={
+            isCorrect !== null
+              ? isCorrect === true
+                ? '#1E824C'
+                : '#D72729'
+              : 'white'
+          }
+          value={answer}
+          onChange={value => setAnswer(value.target.value)}
+        />
+        <Submit onClick={() => checkAnswer(answer, name)}>Submit</Submit>
       </Main>
     </Wrapper>
   );
-};
-
-export default HeroCard;
+}
